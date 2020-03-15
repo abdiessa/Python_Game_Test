@@ -32,21 +32,21 @@ class Game:
         direction = 0
 
         player_character = PlayerCharacter(
-            'images\space.png', 375, 700, 50, 50)
-        enemy_0 = NonPlayerCharacter('images\enemy.png', 20, 600, 50, 50)
+            'images/space.png', 375, 700, 50, 50)
+        enemy_0 = NonPlayerCharacter('images/enemy.png', 20, 600, 50, 50)
         enemy_0.SPEED *= level_speed
 
         enemy_1 = NonPlayerCharacter(
-            'images\enemy.png', self.width - 40, 400, 50, 50)
+            'images/enemy.png', self.width - 40, 400, 50, 50)
         enemy_1.SPEED *= level_speed
 
-        enemy_2 = NonPlayerCharacter('images\enemy.png', 20, 450, 50, 50)
+        enemy_2 = NonPlayerCharacter('images/enemy.png', 20, 450, 50, 50)
         enemy_2.SPEED *= level_speed
 
-        enemy_3 = NonPlayerCharacter('images\enemy.png', 20, 200, 50, 50)
+        enemy_3 = NonPlayerCharacter('images/enemy.png', 20, 200, 50, 50)
         enemy_3.SPEED *= level_speed
 
-        treasure = GameObject('images\energy.png', 375, 50, 50, 50)
+        treasure = GameObject('images/energy.png', 375, 50, 50, 50)
 
         while not is_game_over:
             for event in pygame.event.get():
@@ -170,7 +170,7 @@ class NonPlayerCharacter(GameObject):
 
 pygame.init()
 
-new_game = Game('images\stage.jpg', SCREEN_TITLE, SCREEN_WIDTH, SCREEN_HEIGHT)
+new_game = Game('images/stage.jpg', SCREEN_TITLE, SCREEN_WIDTH, SCREEN_HEIGHT)
 new_game.run_game_loop(1)
 
 pygame.quit()
